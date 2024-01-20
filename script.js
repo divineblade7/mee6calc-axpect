@@ -2,13 +2,12 @@ function mee6calculator()
 {
     var minxp = document.getElementById("minxp").value;
     var maxxp = document.getElementById("maxxp").value;
-
     var desiredlvl = document.getElementById("desired-level").value;
     var currentlvl = document.getElementById("current-lvl").value;
     var current_xp = document.getElementById("current-xp").value;
     var megapotions = document.getElementById(megapotions).value;
     var ultrapotions = document.getElementById(ultrapotions).value;
-    
+
     //Magical math functions
     
     var currentxp = (5/6 * currentlvl * (2 * currentlvl * currentlvl + 27 * currentlvl + 91)) + current_xp;
