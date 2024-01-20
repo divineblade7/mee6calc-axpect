@@ -6,7 +6,9 @@ function mee6calculator()
     var desiredlvl = document.getElementById("desired-level").value;
     var currentlvl = document.getElementById("current-lvl").value;
     var current_xp = document.getElementById("current-xp").value;
-
+    var megapotions = document.getElementById(megapotions).value;
+    var ultrapotions = document.getElementById(ultrapotions).value;
+    
     //Magical math functions
     
     var currentxp = (5/6 * currentlvl * (2 * currentlvl * currentlvl + 27 * currentlvl + 91)) + current_xp;
@@ -20,6 +22,8 @@ function mee6calculator()
     //Display information to user
     document.getElementById("result-average").innerHTML = avgmsg;
     document.getElementById("result-xp-needed").innerHTML = desiredxp;
+    document.getElementById("result-mega-potions-needed").innerHTML = megapotions;
+    document.getElementById("result-ultra-potions-needed").innerHTML = ultrapotions;
     document.getElementById("result-minimum-messages-requirement").innerHTML = minmsg;
     document.getElementById("result-maximum-messages-requirement").innerHTML = maxmsg;
   
