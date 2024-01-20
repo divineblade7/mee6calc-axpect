@@ -12,6 +12,9 @@ function mee6calculator()
     var totalxp = parseInt(currentxp) + parseInt(xpinlvl);
     var desiredxp = 5/6 * desiredlvl * (2 * desiredlvl * desiredlvl + 27 * desiredlvl + 91);
     var totaldesiredxp = parseInt(desiredxp) - parseInt(totalxp);
+    var megapotions = totaldesiredxp/30000
+    var ultrapotions = megapotions/15
+
 
     //Minimum, average, and maximum messages needed to send in order to reach specified level
     var minmsg = Math.ceil(totaldesiredxp / maxxp);
@@ -23,6 +26,8 @@ function mee6calculator()
     //Display information to user
     document.getElementById("result-average").innerHTML = avgmsg;
     document.getElementById("result-xp-needed").innerHTML = totaldesiredxp;
+    document.getElementById("result-mega-potions-needed").innerHTML = megapotions;
+    document.getElementById("result-ultra-potions-needed").innerHTML = ultrapotions;
     document.getElementById("result-minimum-messages-requirement").innerHTML = minmsg;
     document.getElementById("result-maximum-messages-requirement").innerHTML = maxmsg;
   
