@@ -20,8 +20,8 @@ function mee6calculator() {
     var maxmsg = Math.ceil(totaldesiredxp / minxp);
 
     // Calculate mega and ultra potions needed
-    var megaPotionsNeeded = Math.floor(totaldesiredxp / 30000);
-    var ultraPotionsNeeded = Math.floor(totaldesiredxp / 450000);
+    var megaPotionsNeeded = Math.ceil(totaldesiredxp / 30000);
+    var ultraPotionsNeeded = Math.ceil(totaldesiredxp / 450000);
 
     // Display information to the user
     document.getElementById("result-average").innerHTML = avgmsg;
