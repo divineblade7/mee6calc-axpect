@@ -19,8 +19,8 @@ function mee6calculator() {
     var ultraPotionsNeeded = Math.ceil(desiredxp / 450000);
 
     // Server Gold Needed calculations
-    var serverGoldMega = megapotions * 2000;
-    var serverGoldUltra = ultrapotions * 30000;
+    var serverGoldMega = megapotionsneeded * 2000;
+    var serverGoldUltra = ultrapotionsneeded * 30000;
 
     // Total XP Gain from Potions calculations
     var totalXPMega = megapotionsneeded * 30000;
