@@ -10,16 +10,16 @@
 <body>
     <div class="wrapper">
         <header class="titles">
-            <h1 class="title generic-font"><a>A </a><a class="mee6-link" href="https://mee6.xyz">Mee6</a> Level Calculator</h1>
-            <h2 class="sub-title generic-font">Calculate the xp and potions you need to reach the specified level.</h2>
-            <h2 class="sub-title generic-font"><b>Use !rank to find your current level and xp.</b></h2>
+            <h4 class="title generic-font"><a>A </a><a class="mee6-link" href="https://mee6.xyz">Mee6</a> Level Calculator</h4>
+            <h5 class="sub-title generic-font">Calculate the xp and potions you need to reach the specified level.</h5>
+            <h5 class="sub-title generic-font"><b>Use !rank to find your current level and xp.</b></h5>
         </header>
-
+    <!--
         <div class="input-field1">
             <input type="number" class="xp minxp generic-font" id="minxp" placeholder="Minimum xp(default = 15)" value="15">
             <input type="number" class="xp maxxp generic-font" id="maxxp" placeholder="Maximum xp(default = 25)" value="25">
         </div>
-
+    -->
         <div class="input-field2">
             <input type="number" class="input-box generic-font" id="current-lvl" placeholder="Current Level">
             <input type="number" class="input-box generic-font" id="current-xp" placeholder="Current XP">
@@ -27,44 +27,43 @@
             <a class="button-calculate generic-font" onclick="mee6calculator()" href="#result">CALCULATE</a>
         </div>
 
-        <div class="results" id="result">
+        <div class="results" id="result" style="display: none;">
             <div class="result-main">
               <br>
-            <!--
-                <h2 class="result-title generic-font">You need to send <span id="result-average">_</span> more messages</h2>
-                <span class="result-sub-title generic-font"> to reach that level.</span>
-              <br>
-            -->
-                <span class="result-xp-left generic-font">You need <span id="result-xp-needed">_</span> more XP</span>
-                <!-- Add these lines where you want to display mega and ultra potions results -->
-              <br>
-                <div class="result-potions">
+                <span class="result-xp-left generic-font" id="result-xp-left">You need <span id="result-xp-needed">_</span> more XP</span>
+                <br>
+                <div id="mega-potions-results" style="display: none;">
                     Mega Potions Needed:
+                    <br>
                     <span id="result-mega-potions-needed">_</span>
+                    <br>
                     Server Gold Needed:
+                    <br>
                     <span id="result-server-gold-mega">_</span>
+                    <br>
                     Total XP Gain from Mega Potions:
+                    <br>
                     <span id="result-total-xp-mega">_</span>
+                    <br>
+                    <br>
+                    Or
                 </div>
-            
-                <div class="result-potions">
+                <br>      
+                <div id="ultra-potions-results" style="display: none;">
                     Ultra Potions Needed:
+                    <br>
                     <span id="result-ultra-potions-needed">_</span>
+                    <br>
                     Server Gold Needed:
+                    <br>
                     <span id="result-server-gold-ultra">_</span>
+                    <br>
                     Total XP Gain from Ultra Potions:
+                    <br>
                     <span id="result-total-xp-ultra">_</span>
-                </div>
-
+                  </div>
             </div>
-
-                <!-- Remove or comment out the following line -->
-                <!--
-                <div class="result-max-min-messages">
-                </div>
-                -->
-
-            <!-- Add the new expandable section -->
+        </div>
             <div class="expandable-section">
                 <div class="expandable-header" onclick="toggleExpandableSection('server-ranks')">
                     <h2>Server Ranks</h2>
@@ -108,20 +107,7 @@
                         <button onclick="displayAct('Act I Normal: Level 1-4')">Act I Normal: Level 1-4</button>
                     </div>
                 </div>
-            </div>
-            <!-- End of the new expandable section -->
-
         </div>
-
-        <!-- Remove or comment out the following line -->
-        <!--
-        <div class="disclaimer">
-            This site is not affiliated with <a href="https://mee6.xyz/">mee6.xyz</a><br>
-            View the source-code on <a href="https://github.com/axpect7/mee6calc">GitHub</a><br>
-            Licensed under the <a href="https://github.com/axpect7/mee6calc/blob/main/LICENSE">MIT License</a>
-        </div>
-            -->
-            <!-- End of the line to remove or comment out -->
     </div>
 
     <script>
