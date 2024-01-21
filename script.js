@@ -18,11 +18,24 @@ function mee6calculator() {
     var megaPotionsNeeded = Math.ceil(desiredxp / 30000);
     var ultraPotionsNeeded = Math.ceil(desiredxp / 450000);
 
+    // Server Gold Needed calculations
+    var serverGoldMega = megapotions * 2000;
+    var serverGoldUltra = ultrapotions * 30000;
+
+    // Total XP Gain from Potions calculations
+    var totalXPMega = megapotionsneeded * 30000;
+    var totalXPUltra = ultrapotionsneeded * 450000;
+
     // Display information to the user
     document.getElementById("result-average").innerHTML = avgmsg;
     document.getElementById("result-xp-needed").innerHTML = desiredxp;
+    // Display potion information
     document.getElementById("result-mega-potions-needed").innerHTML = megaPotionsNeeded;
     document.getElementById("result-ultra-potions-needed").innerHTML = ultraPotionsNeeded;
+    document.getElementById("result-server-gold-mega").innerHTML = serverGoldMega;
+    document.getElementById("result-server-gold-ultra").innerHTML = serverGoldUltra;
+    document.getElementById("result-total-xp-mega").innerHTML = totalXPMega;
+    document.getElementById("result-total-xp-ultra").innerHTML = totalXPUltra;
     //document.getElementById("result-minimum-messages-requirement").innerHTML = minmsg;
     //document.getElementById("result-maximum-messages-requirement").innerHTML = maxmsg;
 }

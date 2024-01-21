@@ -30,20 +30,43 @@
         <div class="results" id="result">
             <div class="result-main">
               <br>
+            <!--
                 <h2 class="result-title generic-font">You need to send <span id="result-average">_</span> more messages</h2>
                 <span class="result-sub-title generic-font"> to reach that level.</span>
               <br>
+            -->
                 <span class="result-xp-left generic-font">You need <span id="result-xp-needed">_</span> more XP</span>
                 <!-- Add these lines where you want to display mega and ultra potions results -->
-                <span class="result-mega-potions generic-font">Mega Potions Needed: <span id="result-mega-potions-needed">_</span></span>
-                <span class="result-ultra-potions generic-font">Ultra Potions Needed: <span id="result-ultra-potions-needed">_</span></span>
+              <br>
+                <div class="result-potions">
+                    <h2>Mega Potions Needed:</h2>
+                    <span id="result-mega-potions-needed">_</span>
+                    <br>
+                    <h2>Server Gold Needed:</h2>
+                    <span id="result-server-gold-mega">_</span>
+                    <br>
+                    <h2>Total XP Gain from Mega Potions:</h2>
+                    <span id="result-total-xp-mega">_</span>
+                </div>
+            
+                <div class="result-potions">
+                    <h2>Ultra Potions Needed:</h2>
+                    <span id="result-ultra-potions-needed">_</span>
+                    <br>
+                    <h2>Server Gold Needed:</h2>
+                    <span id="result-server-gold-ultra">_</span>
+                    <br>
+                    <h2>Total XP Gain from Ultra Potions:</h2>
+                    <span id="result-total-xp-ultra">_</span>
+                </div>
+
             </div>
 
                 <!-- Remove or comment out the following line -->
                 <!--
                 <div class="result-max-min-messages">
-            </div>
-        -->
+                </div>
+                -->
 
             <!-- Add the new expandable section -->
             <div class="expandable-section">
