@@ -47,30 +47,47 @@
 
             <!-- Add the new expandable section -->
             <div class="expandable-section">
-                <div class="expandable-header" onclick="toggleExpandableSection()">
+                <div class="expandable-header" onclick="toggleExpandableSection('server-ranks')">
                     <h2>Server Ranks</h2>
                 </div>
-                <div class="expandable-content" id="expandable-content" style="display: none;">
-                    <p>Act I Normal: Level 1-4</p>
-                    <p>Act II Normal: Level 5-9</p>
-                    <p>Act III Normal: Level 10-14</p>
-                    <p>Act IV Normal: Level 15-21</p>
-                    <p>Act V Normal: Level 22-26</p>
-                    <p>Act I Nightmare: Level 27-32</p>
-                    <p>Act II Nightmare: Level 33-38</p>
-                    <p>Act III Nightmare: Level 39-43</p>
-                    <p>Act IV Nightmare: Level 44-50</p>
-                    <p>Act V Nightmare: Level 51-55</p>
-                    <p>Act I Hell: Level 56-66</p>
-                    <p>Act II Hell: Level 67-77</p>
-                    <p>Act III Hell: Level 78-86</p>
-                    <p>Act IV Hell: Level 87-98</p>
-                    <p>Act V Hell: Level 99-134</p>
-                    <p>Act I Terror: Level 135-184</p>
-                    <p>Act II Terror: Level 185-259</p>
-                    <p>Act III Terror: Level 260-334</p>
-                    <p>Act IV Terror: Level 335-399</p>
-                    <p>Act V Terror: Level 400</p>
+                <div class="expandable-content" id="server-ranks" style="display: none;">
+                    <button onclick="toggleExpandableSection('terror-acts')">Terror</button>
+                    <button onclick="toggleExpandableSection('hell-acts')">Hell</button>
+                    <button onclick="toggleExpandableSection('nightmare-acts')">Nightmare</button>
+                    <button onclick="toggleExpandableSection('normal-acts')">Normal</button>
+
+                    <!-- Subcategories -->
+                    <div class="expandable-subsection" id="terror-acts" style="display: none;">
+                        <button onclick="displayAct('Act V Terror: Level 400')">Act V Terror: Level 400</button>
+                        <button onclick="displayAct('Act IV Terror: Level 335-399')">Act IV Terror: Level 335-399</button>
+                        <button onclick="displayAct('Act III Terror: Level 260-334')">Act III Terror: Level 260-334</button>
+                        <button onclick="displayAct('Act II Terror: Level 185-259')">Act II Terror: Level 185-259</button>
+                        <button onclick="displayAct('Act I Terror: Level 135-184')">Act I Terror: Level 135-184</button>
+                    </div>
+
+                    <div class="expandable-subsection" id="hell-acts" style="display: none;">
+                        <button onclick="displayAct('Act V Hell: Level 99-134')">Act V Hell: Level 99-134</button>
+                        <button onclick="displayAct('Act IV Hell: Level 87-98')">Act IV Hell: Level 87-98</button>
+                        <button onclick="displayAct('Act III Hell: Level 78-86')">Act III Hell: Level 78-86</button>
+                        <button onclick="displayAct('Act II Hell: Level 67-77')">Act II Hell: Level 67-77</button>
+                        <button onclick="displayAct('Act I Hell: Level 56-66')">Act I Hell: Level 56-66</button>
+                    </div>
+
+                    <div class="expandable-subsection" id="nightmare-acts" style="display: none;">
+                        <button onclick="displayAct('Act V Nightmare: Level 51-55')">Act V Nightmare: Level 51-55</button>
+                        <button onclick="displayAct('Act IV Nightmare: Level 44-50')">Act IV Nightmare: Level 44-50</button>
+                        <button onclick="displayAct('Act III Nightmare: Level 39-43')">Act III Nightmare: Level 39-43</button>
+                        <button onclick="displayAct('Act II Nightmare: Level 33-38')">Act II Nightmare: Level 33-38</button>
+                        <button onclick="displayAct('Act I Nightmare: Level 27-32')">Act I Nightmare: Level 27-32</button>
+                    </div>
+
+                    <div class="expandable-subsection" id="normal-acts" style="display: none;">
+                        <button onclick="displayAct('Act V Normal: Level 22-26')">Act V Normal: Level 22-26</button>
+                        <button onclick="displayAct('Act IV Normal: Level 15-21')">Act IV Normal: Level 15-21</button>
+                        <button onclick="displayAct('Act III Normal: Level 10-14')">Act III Normal: Level 10-14</button>
+                        <button onclick="displayAct('Act II Normal: Level 5-9')">Act II Normal: Level 5-9</button>
+                        <button onclick="displayAct('Act I Normal: Level 1-4')">Act I Normal: Level 1-4</button>
+                    </div>
                 </div>
             </div>
             <!-- End of the new expandable section -->
@@ -89,9 +106,13 @@
     </div>
 
     <script>
-        function toggleExpandableSection() {
-            var content = document.getElementById("expandable-content");
+        function toggleExpandableSection(sectionId) {
+            var content = document.getElementById(sectionId);
             content.style.display = (content.style.display === "none" || content.style.display === "") ? "block" : "none";
+        }
+
+        function displayAct(actDetails) {
+            alert(actDetails);  // You can customize this to display or handle the selected Act
         }
     </script>
 </body>
