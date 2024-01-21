@@ -23,6 +23,6 @@ function mee6calculator() {
     document.getElementById("result-xp-needed").innerHTML = desiredxp;
     document.getElementById("result-mega-potions-needed").innerHTML = megaPotionsNeeded;
     document.getElementById("result-ultra-potions-needed").innerHTML = ultraPotionsNeeded;
-    document.getElementById("result-minimum-messages-requirement").innerHTML = minmsg;
-    document.getElementById("result-maximum-messages-requirement").innerHTML = maxmsg;
+    //document.getElementById("result-minimum-messages-requirement").innerHTML = minmsg;
+    //document.getElementById("result-maximum-messages-requirement").innerHTML = maxmsg;
 }

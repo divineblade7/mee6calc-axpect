@@ -26,8 +26,8 @@ function mee6calculator() {
     // Display information to the user
     document.getElementById("result-average").innerHTML = avgmsg;
     document.getElementById("result-xp-needed").innerHTML = totaldesiredxp;
-    document.getElementById("result-minimum-messages-requirement").innerHTML = minmsg;
-    document.getElementById("result-maximum-messages-requirement").innerHTML = maxmsg;
+    //document.getElementById("result-minimum-messages-requirement").innerHTML = minmsg;
+    //document.getElementById("result-maximum-messages-requirement").innerHTML = maxmsg;
 
     // Display potion information
     document.getElementById("result-mega-potions-needed").innerHTML = megaPotionsNeeded;
